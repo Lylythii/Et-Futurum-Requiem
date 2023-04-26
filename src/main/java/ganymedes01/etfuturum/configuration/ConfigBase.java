@@ -91,8 +91,8 @@ public abstract class ConfigBase extends Configuration {
 			}
 		}
 
-		Block block = ConfigWorld.amethystOuterID == 1 && ConfigBlocksItems.enableTuff ? ModBlocks.tuff : ExternalContent.netherlicious_basalt_bricks;
-		ConfigWorld.amethystOuterBlock = ConfigWorld.amethystOuterID == 0 || block == null ? ModBlocks.smooth_basalt : block;
+		Block block = ConfigWorld.gemstoneOuterID == 1 && ConfigBlocksItems.enableTuff ? ModBlocks.tuff : ExternalContent.netherlicious_basalt_bricks;
+		ConfigWorld.gemstoneOuterBlock = ConfigWorld.gemstoneOuterID == 0 || block == null ? ModBlocks.smooth_basalt : block;
 		if(!EtFuturum.hasIronChest) {
 			ConfigBlocksItems.enableShulkerBoxesIronChest = false;
 		}

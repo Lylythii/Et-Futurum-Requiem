@@ -108,7 +108,7 @@ public class ConfigBlocksItems extends ConfigBase {
 	public static boolean enableFletchingTable;
 	public static boolean enableCartographyTable;
 	public static boolean enableLoom;
-	public static boolean enableAmethyst;
+	public static boolean enableGemstone;
 	public static boolean enableDyedBeds;
 	public static boolean enableTarget;
 	public static boolean enableSculk;
@@ -185,7 +185,7 @@ public class ConfigBlocksItems extends ConfigBase {
 		enableDeepslate = cfg.getBoolean("enableDeepslate", catBlockNatural, true, "");
 		enableTuff = cfg.getBoolean("enableTuff", catBlockNatural, true, "");
 		enableDeepslateOres = cfg.getBoolean("enableDeepslateOres", catBlockNatural, true, "Enable deepslate ores for copper ore and vanilla ores when deepslate generates over them.");
-		enableAmethyst = cfg.getBoolean("enableAmethyst", catBlockNatural, true, "Enables tinted glass, amethyst blocks, budding amethyst and amethyst crystals. Also enables the item too. Smooth basalt can be disabled by changing the world.cfg option for the basalt layer to something else.");
+		enableGemstone = cfg.getBoolean("enableGemstone", catBlockNatural, true, "Enables tinted glass, gemstone blocks, budding gemstone and gemstone crystals. Also enables the item too. Smooth basalt can be disabled by changing the world.cfg option for the basalt layer to something else.");
 
 //      enableSculk = cfg.getBoolean("enableSculk", catBlockNatural, true, "Enables sculk-related blocks.");
 

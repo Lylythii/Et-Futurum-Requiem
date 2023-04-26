@@ -15,8 +15,8 @@ public class ConfigWorld extends ConfigBase {
 
 	public static Block fossilBoneBlock;
 	public static int fossilBlockID;
-	public static Block amethystOuterBlock;
-	public static int amethystOuterID;
+	public static Block gemstoneOuterBlock;
+	public static int gemstoneOuterID;
 	
 	public static boolean enableDmgIndicator;
 	public static boolean enableAirDebris;
@@ -43,12 +43,12 @@ public class ConfigWorld extends ConfigBase {
 	public static boolean enableExtraMesaGold;
 	public static boolean enableMesaMineshaft;
 	public static boolean enableCoarseDirtReplacement;
-	public static boolean enableAmethystGeodes;
-	public static int buddingAmethystMode;
-	public static int amethystRarity;
-	public static int amethystMaxY;
-	public static int[] amethystDimensionBlacklist;
-	public static boolean amethystDimensionBlacklistAsWhitelist;
+	public static boolean enableGemstoneGeodes;
+	public static int buddingGemstoneMode;
+	public static int gemstoneRarity;
+	public static int gemstoneMaxY;
+	public static int[] gemstoneDimensionBlacklist;
+	public static boolean gemstoneDimensionBlacklistAsWhitelist;
 
 	public static final String catClient = "client";
 	public static final String catGeneration = "generation";
@@ -89,7 +89,7 @@ public class ConfigWorld extends ConfigBase {
 		enableOceanMonuments = cfg.getBoolean("enableOceanMonuments", catGeneration, true, "Note: Ocean monuments currently do not have guardians");
 		enableFossils = cfg.getBoolean("enableFossils", catGeneration, true, "");
 		fossilBlockID  = cfg.getInt("fossilBoneBlock", catGeneration, 0, 0, 2, "0 = Et Futurum bone block\n1 = Netherlicious bone block\n2 = UpToDateMod bone block.\nIf the block does not exist, this option is ignored.");
-		amethystOuterID  = cfg.getInt("amethystOuterBlock", catGeneration, 0, 0, 2, "0 = Et Futurum smooth basalt block\n1 = Et Futurum tuff block\n2 = Netherlicious smooth basalt block\nSince there's no other way to get Et Futurum's smooth basalt, using an option other than 0, if they exist, will disable Et Futurum smooth basalt. If the selected block does not exist (disabled or mod not installed), this option does nothing.");
+		gemstoneOuterID  = cfg.getInt("gemstoneOuterBlock", catGeneration, 0, 0, 2, "0 = Et Futurum smooth basalt block\n1 = Et Futurum tuff block\n2 = Netherlicious smooth basalt block\nSince there's no other way to get Et Futurum's smooth basalt, using an option other than 0, if they exist, will disable Et Futurum smooth basalt. If the selected block does not exist (disabled or mod not installed), this option does nothing.");
 		Property fossilBlacklistProp = cfg.get(catGeneration, "fossilDimensionBlacklist", new int[] {-1, 1});
 		fossilBlacklistProp.comment = "The dimensions the fossil structures should not spawn in.";
 		fossilDimensionBlacklist = fossilBlacklistProp.getIntList();
@@ -102,14 +102,14 @@ public class ConfigWorld extends ConfigBase {
 		enableExtraMesaGold = cfg.getBoolean("enableExtraMesaGold", catGeneration, true, "Generate 20 more veins of gold ore from Y 32 to Y 80 in any Mesa biome.");
 		enableMesaMineshaft = cfg.getBoolean("enableMesaMineshaft", catGeneration, true, "Generates extra mineshafts in mesa biomes up to y80. If fences are enabled, dark oak wood is used.");
 		enableCoarseDirtReplacement = cfg.getBoolean("enableCoarseDirtReplacement", catGeneration, true, "Replaces coarse dirt in biomes it (dirt:1) generates in such as shattered savannas or mesa plateaus.");
-		enableAmethystGeodes = cfg.getBoolean("enableAmethystGeodes", catGeneration, true, "");
-		buddingAmethystMode  = cfg.getInt("buddingAmethystMode", catGeneration, 0, 0, 2, "0 = Budding amethyst cannot be obtained at all even with silk touch. When using this option, attempting to push them using a piston will break it.\n1 = Budding amethyst will drop if you use a silk touch pickaxe.\n2 = Budding amethyst does not need silk touch, just a pickaxe.");
-		Property amethystBlacklistProp = cfg.get(catGeneration, "amethystDimensionBlacklist", new int[] {-1, 1});
-		amethystBlacklistProp.comment = "What dimensions should we ban amethyst geodes from generating in?";
-		amethystDimensionBlacklist = amethystBlacklistProp.getIntList();
-		amethystDimensionBlacklistAsWhitelist = cfg.getBoolean("amethystDimensionBlacklistAsWhitelist", catGeneration, false, "Treat the amethyst dimension blacklist as a whitelist instead, so geodes will ONLY generate in those dimensions, instead of excluding those dimensions from generation.");
-		amethystRarity = cfg.getInt("amethystRarity", catGeneration, 53, 1, 128, "How rare should amethyst geodes be? 1/x chance per chunk, 1 means a geode attempts to appear every chunk");
-		amethystMaxY = cfg.getInt("amethystMaxY", catGeneration, 46, 6, 245, "Max Y level amethyst geodes should attempt to generate at");
+		enableGemstoneGeodes = cfg.getBoolean("enableGemstoneGeodes", catGeneration, true, "");
+		buddingGemstoneMode  = cfg.getInt("buddingGemstoneMode", catGeneration, 0, 0, 2, "0 = Budding gemstone cannot be obtained at all even with silk touch. When using this option, attempting to push them using a piston will break it.\n1 = Budding gemstone will drop if you use a silk touch pickaxe.\n2 = Budding gemstone does not need silk touch, just a pickaxe.");
+		Property gemstoneBlacklistProp = cfg.get(catGeneration, "gemstoneDimensionBlacklist", new int[] {-1, 1});
+		gemstoneBlacklistProp.comment = "What dimensions should we ban gemstone geodes from generating in?";
+		gemstoneDimensionBlacklist = gemstoneBlacklistProp.getIntList();
+		gemstoneDimensionBlacklistAsWhitelist = cfg.getBoolean("gemstoneDimensionBlacklistAsWhitelist", catGeneration, false, "Treat the gemstone dimension blacklist as a whitelist instead, so geodes will ONLY generate in those dimensions, instead of excluding those dimensions from generation.");
+		gemstoneRarity = cfg.getInt("gemstoneRarity", catGeneration, 53, 1, 128, "How rare should gemstone geodes be? 1/x chance per chunk, 1 means a geode attempts to appear every chunk");
+		gemstoneMaxY = cfg.getInt("gemstoneMaxY", catGeneration, 46, 6, 245, "Max Y level gemstone geodes should attempt to generate at");
 		
 		tileReplacementMode = cfg.getInt("tileReplacementMode", catMisc, 0, -1, 1, "Replace old Brewing Stands/Enchanting Tables/Daylight Sensors/Beacons with new one on the fly.\n-1 = Disabled, no conversion even if the replacement tile entities are on\n0 = Convert the vanilla tile entities to their Et Futurum versions\n1 = Convert Et Futurum replacement tile entities back to default ones. Useful if you want to turn those off.");
 	}

@@ -20,7 +20,22 @@ public class RenderIDs {
 	public static final int STONECUTTER = RenderingRegistry.getNextAvailableRenderId();
 	public static final int COMPOSTER = RenderingRegistry.getNextAvailableRenderId();
 	public static final int LOOM = RenderingRegistry.getNextAvailableRenderId();
+	
+	/* Gemstones */
+	public static final int RUBY_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int SAPPHIRE_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int EMERALD_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int TOPAZ_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int TOURMALINE_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int JADE_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int BERYL_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int AGATE_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int OPAL_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int GARNET_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int JASPER_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
 	public static final int AMETHYST_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	public static final int DIAMOND_CLUSTER = RenderingRegistry.getNextAvailableRenderId();
+	
 	public static final int POINTED_DRIPSTONE = RenderingRegistry.getNextAvailableRenderId();
 	public static final int OBSERVER = RenderingRegistry.getNextAvailableRenderId();
 }

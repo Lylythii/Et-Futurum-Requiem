@@ -45,7 +45,7 @@ public class WorldGenAmethystGeode extends WorldGenerator {
 	}
 	
 	public WorldGenAmethystGeode(int minOffset, int maxOffset, int invalidMax, int[] distPoints, int[] outerWallDist, double fill, double inner, double middle, double outer, int[] pointOff, double crackChance, double baseCrack, int crackPointOff, double noiseAmp, double budChance, double potentialPlaceChance) {
-		outerMeta = ConfigWorld.amethystOuterBlock == ExternalContent.netherlicious_basalt_bricks ? 6 : 0;
+		outerMeta = ConfigWorld.gemstoneOuterBlock == ExternalContent.netherlicious_basalt_bricks ? 6 : 0;
 		budBlocks = ImmutableList.of(ModBlocks.amethyst_cluster_1, ModBlocks.amethyst_cluster_2);
 		
 		minGenOffset = minOffset;
@@ -208,7 +208,7 @@ public class WorldGenAmethystGeode extends WorldGenerator {
 					} else if (u >= middleLayerSqrt) {
 					   world.setBlock(blockPos3.getX(), blockPos3.getY(), blockPos3.getZ(), ModBlocks.calcite, 0, 2);//MiddleLayerProvider also TODO I need to make this layer configurable
 					} else if (u >= outerLayerSqrt) {
-					   world.setBlock(blockPos3.getX(), blockPos3.getY(), blockPos3.getZ(), ConfigWorld.amethystOuterBlock, outerMeta, 2);//OuterLayerProvider
+					   world.setBlock(blockPos3.getX(), blockPos3.getY(), blockPos3.getZ(), ConfigWorld.gemstoneOuterBlock, outerMeta, 2);//OuterLayerProvider
 					}
 				 }
 			 }

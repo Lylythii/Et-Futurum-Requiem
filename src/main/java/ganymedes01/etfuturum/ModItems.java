@@ -8,7 +8,22 @@ import ganymedes01.etfuturum.blocks.IConfigurable;
 import ganymedes01.etfuturum.configuration.configs.ConfigBlocksItems;
 import ganymedes01.etfuturum.entities.EntityNewBoat;
 import ganymedes01.etfuturum.items.IRegistryName;
+
+/* Gemstone Shards */
+import ganymedes01.etfuturum.items.ItemRubyShard;
+import ganymedes01.etfuturum.items.ItemSapphireShard;
+import ganymedes01.etfuturum.items.ItemDiamondShard;
+import ganymedes01.etfuturum.items.ItemEmeraldShard;
+import ganymedes01.etfuturum.items.ItemGarnetShard;
+import ganymedes01.etfuturum.items.ItemJadeShard;
+import ganymedes01.etfuturum.items.ItemJasperShard;
+import ganymedes01.etfuturum.items.ItemTopazShard;
+import ganymedes01.etfuturum.items.ItemTourmalineShard;
+import ganymedes01.etfuturum.items.ItemOpalShard;
+import ganymedes01.etfuturum.items.ItemBerylShard;
+import ganymedes01.etfuturum.items.ItemAgateShard;
 import ganymedes01.etfuturum.items.ItemAmethystShard;
+
 import ganymedes01.etfuturum.items.ItemArmorStand;
 import ganymedes01.etfuturum.items.ItemArrowTipped;
 import ganymedes01.etfuturum.items.ItemBeetroot;
@@ -111,7 +126,22 @@ public class ModItems {
 	public static final Item[] chest_boats = new Item[EntityNewBoat.Type.values().length];
 	public static final Item pigstep_record = initItem(new ItemEtFuturumRecord("pigstep"));
 	public static final Item otherside_record = initItem(new ItemEtFuturumRecord("otherside"));
+	
+	/* Gemstone Shards */
+	public static final Item ruby_shard = initItem(new ItemRubyShard());
+	public static final Item sapphire_shard = initItem(new ItemSapphireShard());
+	public static final Item diamond_shard = initItem(new ItemDiamondShard());
+	public static final Item emerald_shard = initItem(new ItemEmeraldShard());
+	public static final Item garnet_shard = initItem(new ItemGarnetShard());
+	public static final Item jade_shard = initItem(new ItemJadeShard());
+	public static final Item jasper_shard = initItem(new ItemJasperShard());
+	public static final Item topaz_shard = initItem(new ItemTopazShard());
+	public static final Item tourmaline_shard = initItem(new ItemTourmalineShard());
+	public static final Item opal_shard = initItem(new ItemOpalShard());
+	public static final Item beryl_shard = initItem(new ItemBerylShard());
+	public static final Item agate_shard = initItem(new ItemAgateShard());
 	public static final Item amethyst_shard = initItem(new ItemAmethystShard());
+	
 	public static final Item shulker_box_upgrade = initItem(new ItemShulkerBoxUpgrade());
 
 	static {

@@ -23,7 +23,7 @@ public class BlockSmoothBasalt extends Block implements IConfigurable {
 
 	@Override
 	public boolean isEnabled() {
-		return ConfigBlocksItems.enableAmethyst && isSmoothBasaltUsed();
+		return ConfigBlocksItems.enableGemstone && isSmoothBasaltUsed();
 	}
 	
 	/*
@@ -31,10 +31,10 @@ public class BlockSmoothBasalt extends Block implements IConfigurable {
 	 * This is because since the block check runs after the game loads, the variable won't be populated yet.
 	 */
 	private boolean isSmoothBasaltUsed() {
-		if(ConfigWorld.amethystOuterID == 0) {
+		if(ConfigWorld.gemstoneOuterID == 0) {
 			return true;
 		}
-		return ConfigWorld.amethystOuterID == 1 ? !ConfigBlocksItems.enableTuff : !EtFuturum.hasNetherlicious;
+		return ConfigWorld.gemstoneOuterID == 1 ? !ConfigBlocksItems.enableTuff : !EtFuturum.hasNetherlicious;
 	}
 
 }

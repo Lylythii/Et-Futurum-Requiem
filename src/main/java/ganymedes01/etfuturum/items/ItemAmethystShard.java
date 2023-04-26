@@ -16,7 +16,7 @@ public class ItemAmethystShard extends Item implements IConfigurable {
 	
 	@Override
 	public boolean isEnabled() {
-		return ConfigBlocksItems.enableAmethyst;
+		return ConfigBlocksItems.enableGemstone;
 	}
 
 }

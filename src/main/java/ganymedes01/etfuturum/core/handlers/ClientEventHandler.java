@@ -85,7 +85,7 @@ public class ClientEventHandler {
 	 * Left = field_26997 (Seems to be related to pitch)
 	 * Right = lastChimeAge
 	 */
-	private static final Map<Entity, MutablePair<Float, Integer>> AMETHYST_CHIME_CACHE = new WeakHashMap<>();
+	private static final Map<Entity, MutablePair<Float, Integer>> GEMSTONE_CHIME_CACHE = new WeakHashMap<>();
 	/**
 	 * Used by sound events to get the unlocalized name for the specific state of a block. This is handled on the item's end of things.
 	 * So I use this "storage" stack to store the block I want the meta-name for, so I don't create new ItemStack instances constantly.
@@ -606,8 +606,8 @@ public class ClientEventHandler {
 							return;
 						}
 					}
-				} else if(ModSounds.soundAmethystBlock.getStepResourcePath().equals(event.name)) {
-					MutablePair<Float, Integer> pair = AMETHYST_CHIME_CACHE.get(event.entity);
+				} else if(ModSounds.soundGemstoneBlock.getStepResourcePath().equals(event.name)) {
+					MutablePair<Float, Integer> pair = GEMSTONE_CHIME_CACHE.get(event.entity);
 					if(pair == null) {
 						pair = new MutablePair(0.0F, 0);
 					}
@@ -618,11 +618,11 @@ public class ClientEventHandler {
 						field_26997 = Math.min(1.0F, field_26997 + 0.07F);
 						float f = 0.5F + field_26997 * event.entity.worldObj.rand.nextFloat() * 1.2F;
 						float g = 0.1F + field_26997 * 1.2F;
-						event.entity.playSound(Reference.MCAssetVer + ":block.amethyst_block.chime", g, f);
+						event.entity.playSound(Reference.MCAssetVer + ":block.gemstone_block.chime", g, f);
 						lastChimeAge = event.entity.ticksExisted;
 						pair.setLeft(field_26997);
 						pair.setRight(lastChimeAge);
-						AMETHYST_CHIME_CACHE.put(event.entity, pair);
+						GEMSTONE_CHIME_CACHE.put(event.entity, pair);
 					}
 				}
 			}

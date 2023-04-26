@@ -37,7 +37,7 @@ public class BlockAmethystCluster extends BlockAmethystBlock implements ISubBloc
 		super(Material.glass);
 		setHardness(1.5F);
 		setResistance(1.5F);
-		setStepSound(ConfigSounds.newBlockSounds ? ModSounds.soundAmethystCluster : soundTypeGlass);
+		setStepSound(ConfigSounds.newBlockSounds ? ModSounds.soundGemstoneCluster : soundTypeGlass);
 		setBlockTextureName("amethyst_cluster");
 		setBlockName(Utils.getUnlocalisedName("amethyst_cluster_" + (type + 1)));
 		setCreativeTab(isEnabled() ? EtFuturum.creativeTabBlocks : null);
@@ -252,7 +252,7 @@ public class BlockAmethystCluster extends BlockAmethystBlock implements ISubBloc
 		return ItemAmethystCluster.class;
 	}
 
-	private static final SoundType[] STEPSOUNDS = new SoundType[] {ModSounds.soundAmethystBudSmall, ModSounds.soundAmethystBudMed, ModSounds.soundAmethystBudLrg, null};
+	private static final SoundType[] STEPSOUNDS = new SoundType[] {ModSounds.soundGemstoneBudSmall, ModSounds.soundGemstoneBudMed, ModSounds.soundGemstoneBudLrg, null};
 	@Override
 	public SoundType getStepSound(IBlockAccess world, int x, int y, int z, int meta) {
 		return STEPSOUNDS[(meta < 6 ? 0 : 1) + (type == 0 ? 0 : 2)];

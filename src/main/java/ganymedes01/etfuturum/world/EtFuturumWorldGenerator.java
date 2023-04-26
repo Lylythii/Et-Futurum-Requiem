@@ -14,6 +14,18 @@ import ganymedes01.etfuturum.configuration.configs.ConfigWorld;
 import ganymedes01.etfuturum.world.end.dimension.EndWorldProvider;
 import ganymedes01.etfuturum.world.generate.WorldGenDeepslateLayerBlob;
 import ganymedes01.etfuturum.world.generate.WorldGenMinableCustom;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenRubyGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenSapphireGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenDiamondGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenEmeraldGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenGarnetGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenJadeGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenJasperGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenTopazGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenTourmalineGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenAgateGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenBerylGeode;
+import ganymedes01.etfuturum.world.generate.feature.WorldGenOpalGeode;
 import ganymedes01.etfuturum.world.generate.feature.WorldGenAmethystGeode;
 import ganymedes01.etfuturum.world.generate.feature.WorldGenFossil;
 import ganymedes01.etfuturum.world.structure.MapGenMesaMineshaft;
@@ -48,6 +60,18 @@ public class EtFuturumWorldGenerator implements IWorldGenerator {
 	
 	protected final WorldGenMinable deepslateBlobGen = new WorldGenDeepslateLayerBlob(ConfigWorld.maxDeepslatePerCluster, false);
 	protected final WorldGenMinable tuffGen = new WorldGenDeepslateLayerBlob(ConfigWorld.maxTuffPerCluster, true);
+	protected WorldGenerator rubyGen;
+	protected WorldGenerator sapphireGen;
+	protected WorldGenerator diamondGen;
+	protected WorldGenerator emeraldGen;
+	protected WorldGenerator garnetGen;
+	protected WorldGenerator jadeGen;
+	protected WorldGenerator jasperGen;
+	protected WorldGenerator topazGen;
+	protected WorldGenerator tourmalineGen;
+	protected WorldGenerator berylGen;
+	protected WorldGenerator opalGen;
+	protected WorldGenerator agateGen;
 	protected WorldGenerator amethystGen;
 	protected final WorldGenerator fossils = new WorldGenFossil();
 	
@@ -76,14 +100,146 @@ public class EtFuturumWorldGenerator implements IWorldGenerator {
 				}
 			}
 			
-			if(ConfigBlocksItems.enableAmethyst && ArrayUtils.contains(ConfigWorld.amethystDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.amethystDimensionBlacklistAsWhitelist) {
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
 				x = chunkX * 16 + rand.nextInt(16) + 8;
 				z = chunkZ * 16 + rand.nextInt(16) + 8;
-				if(ConfigWorld.enableAmethystGeodes && rand.nextInt(ConfigWorld.amethystRarity) == 0) {
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(rubyGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						rubyGen = new WorldGenRubyGeode();
+					}
+					rubyGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(sapphireGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						sapphireGen = new WorldGenSapphireGeode();
+					}
+					sapphireGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(diamondGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						diamondGen = new WorldGenDiamondGeode();
+					}
+					diamondGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(emeraldGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						emeraldGen = new WorldGenEmeraldGeode();
+					}
+					emeraldGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(garnetGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						garnetGen = new WorldGenGarnetGeode();
+					}
+					garnetGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(jadeGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						jadeGen = new WorldGenJadeGeode();
+					}
+					jadeGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(jasperGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						jasperGen = new WorldGenJasperGeode();
+					}
+					jasperGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(topazGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						topazGen = new WorldGenTopazGeode();
+					}
+					topazGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(tourmalineGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						tourmalineGen = new WorldGenTourmalineGeode();
+					}
+					tourmalineGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(berylGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						berylGen = new WorldGenBerylGeode();
+					}
+					berylGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(opalGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						opalGen = new WorldGenOpalGeode();
+					}
+					opalGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
+					if(agateGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
+						agateGen = new WorldGenAgateGeode();
+					}
+					agateGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
+				}
+			}
+			
+			if(ConfigBlocksItems.enableGemstone && ArrayUtils.contains(ConfigWorld.gemstoneDimensionBlacklist, world.provider.dimensionId) == ConfigWorld.gemstoneDimensionBlacklistAsWhitelist) {
+				x = chunkX * 16 + rand.nextInt(16) + 8;
+				z = chunkZ * 16 + rand.nextInt(16) + 8;
+				if(ConfigWorld.enableGemstoneGeodes && rand.nextInt(ConfigWorld.gemstoneRarity) == 0) {
 					if(amethystGen == null) { //This has to be down here because if it's in EtFuturumWorldGenerator(), it causes the static ExternalContent fields to be initialized too early
 						amethystGen = new WorldGenAmethystGeode();
 					}
-					amethystGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.amethystMaxY), z);
+					amethystGen.generate(world, rand, x, MathHelper.getRandomIntegerInRange(rand, 6, ConfigWorld.gemstoneMaxY), z);
 				}
 			}
 			

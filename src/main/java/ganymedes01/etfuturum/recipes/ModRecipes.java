@@ -244,8 +244,9 @@ public class ModRecipes {
 			OreDictionary.registerOre("record", ModItems.otherside_record);
 		}
 
-		if (ConfigBlocksItems.enableAmethyst) {
+		if (ConfigBlocksItems.enableGemstone) {
 			OreDictionary.registerOre("gemAmethyst", ModItems.amethyst_shard);
+			OreDictionary.registerOre("gemRuby", ModItems.ruby_shard);
 			OreDictionary.registerOre("blockGlassTinted", new ItemStack(ModBlocks.tinted_glass, 1, 0));
 		}
 
@@ -915,7 +916,7 @@ public class ModRecipes {
 			addShapedRecipe(new ItemStack(ModBlocks.loom, 1, 0), "SS", "PP", 'P', "plankWood", 'S', new ItemStack(Items.string, 1, 0));
 		}
 
-		if (ConfigBlocksItems.enableAmethyst) {
+		if (ConfigBlocksItems.enableGemstone) {
 			addShapedRecipe(new ItemStack(ModBlocks.amethyst_block, 1, 0), "AA", "AA", 'A', "gemAmethyst");
 			addShapedRecipe(new ItemStack(ModBlocks.tinted_glass, 2, 0), " A ", "AGA", " A ", 'A', "gemAmethyst", 'G', "blockGlassColorless");
 		}

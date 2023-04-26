@@ -66,26 +66,26 @@ public class ModSounds {
 	public static final SoundType soundSculkCatalyst = new CustomSound("sculk_catalyst");
 	public static final SoundType soundVines = new CustomSound("vine");
 	public static final SoundType soundCalcite = new CustomSound("calcite", true);
-	public static final SoundType soundAmethystBlock = new CustomSound("amethyst_block", true);
-	public static final SoundType soundAmethystBudSmall = new CustomSound("small_amethyst_bud", true) {
+	public static final SoundType soundGemstoneBlock = new CustomSound("gemstone_block", true);
+	public static final SoundType soundGemstoneBudSmall = new CustomSound("small_gemstone_bud", true) {
 		@Override
 		public String getStepResourcePath() {
-			return soundAmethystCluster.getStepResourcePath();
+			return soundGemstoneCluster.getStepResourcePath();
 		}
 	};
-	public static final SoundType soundAmethystBudMed = new CustomSound("medium_amethyst_bud", true) {
+	public static final SoundType soundGemstoneBudMed = new CustomSound("medium_gemstone_bud", true) {
 		@Override
 		public String getStepResourcePath() {
-			return soundAmethystCluster.getStepResourcePath();
+			return soundGemstoneCluster.getStepResourcePath();
 		}
 	};
-	public static final SoundType soundAmethystBudLrg = new CustomSound("large_amethyst_bud", true) {
+	public static final SoundType soundGemstoneBudLrg = new CustomSound("large_gemstone_bud", true) {
 		@Override
 		public String getStepResourcePath() {
-			return soundAmethystCluster.getStepResourcePath();
+			return soundGemstoneCluster.getStepResourcePath();
 		}
 	};
-	public static final SoundType soundAmethystCluster = new CustomSound("amethyst_cluster", true);
+	public static final SoundType soundGemstoneCluster = new CustomSound("gemstone_cluster", true);
 	public static final SoundType soundLodestone = new CustomSound("lodestone", true);
 	public static final SoundType soundDripstoneBlock = new CustomSound("dripstone_block");
 	public static final SoundType soundPointedDripstone = new CustomSound("pointed_dripstone");

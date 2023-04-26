@@ -12,6 +12,7 @@ import ganymedes01.etfuturum.EtFuturum;
 import ganymedes01.etfuturum.ModBlocks;
 import ganymedes01.etfuturum.client.model.ModelShulker;
 import ganymedes01.etfuturum.client.renderer.block.BlockAmethystClusterRenderer;
+import ganymedes01.etfuturum.client.renderer.block.BlockRubyClusterRenderer;
 import ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer;
 import ganymedes01.etfuturum.client.renderer.block.BlockChestRenderer;
 import ganymedes01.etfuturum.client.renderer.block.BlockChorusFlowerRender;
@@ -198,8 +199,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerBlockHandler(new BlockLoomRenderer());
 		}
 		
-		if(ConfigBlocksItems.enableAmethyst) {
+		if(ConfigBlocksItems.enableGemstone) {
 			RenderingRegistry.registerBlockHandler(new BlockAmethystClusterRenderer());
+		}
+		if(ConfigBlocksItems.enableGemstone) {
+			RenderingRegistry.registerBlockHandler(new BlockRubyClusterRenderer());
 		}
 		
 		{

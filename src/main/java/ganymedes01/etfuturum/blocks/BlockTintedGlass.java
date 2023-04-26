@@ -40,7 +40,7 @@ public class BlockTintedGlass extends BlockGlass implements IConfigurable {
 
 	@Override
 	public boolean isEnabled() {
-		return ConfigBlocksItems.enableAmethyst;
+		return ConfigBlocksItems.enableGemstone;
 	}
 
 	@Override

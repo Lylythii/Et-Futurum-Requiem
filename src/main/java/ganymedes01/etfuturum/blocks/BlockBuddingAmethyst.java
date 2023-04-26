@@ -20,7 +20,7 @@ public class BlockBuddingAmethyst extends BlockAmethystBlock {
 	public BlockBuddingAmethyst() {
 		setHardness(1.5F);
 		setResistance(1.5F);
-		setStepSound(ConfigSounds.newBlockSounds ? ModSounds.soundAmethystBlock : soundTypeGlass);
+		setStepSound(ConfigSounds.newBlockSounds ? ModSounds.soundGemstoneBlock : soundTypeGlass);
 		setBlockTextureName("budding_amethyst");
 		setBlockName(Utils.getUnlocalisedName("budding_amethyst"));
 		setCreativeTab(isEnabled() ? EtFuturum.creativeTabBlocks : null);
@@ -29,22 +29,22 @@ public class BlockBuddingAmethyst extends BlockAmethystBlock {
 	
 	public int getMobilityFlag()
 	{
-		return ConfigWorld.buddingAmethystMode == 0 ? 1 : 0;
+		return ConfigWorld.buddingGemstoneMode == 0 ? 1 : 0;
 	}
 
 	public boolean canSilkHarvest(World world, EntityPlayer player, int x, int y, int z, int metadata)
 	{
-		return ConfigWorld.buddingAmethystMode != 0;
+		return ConfigWorld.buddingGemstoneMode != 0;
 	}
 	
 	public int quantityDropped(Random p_149745_1_)
 	{
-		return ConfigWorld.buddingAmethystMode == 2 ? 1 : 0;
+		return ConfigWorld.buddingGemstoneMode == 2 ? 1 : 0;
 	}
 
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 	{
-		return ConfigWorld.buddingAmethystMode == 2 ? super.getItemDropped(p_149650_1_, p_149650_2_, p_149650_3_) : null;
+		return ConfigWorld.buddingGemstoneMode == 2 ? super.getItemDropped(p_149650_1_, p_149650_2_, p_149650_3_) : null;
 	}
 	
 	@Override

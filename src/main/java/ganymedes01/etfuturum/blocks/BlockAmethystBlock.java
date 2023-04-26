@@ -21,7 +21,7 @@ public class BlockAmethystBlock extends Block implements IConfigurable {
 		super(material);
 		setHardness(1.5F);
 		setResistance(1.5F);
-		setStepSound(ConfigSounds.newBlockSounds ? ModSounds.soundAmethystBlock : soundTypeGlass);
+		setStepSound(ConfigSounds.newBlockSounds ? ModSounds.soundGemstoneBlock : soundTypeGlass);
 		setBlockTextureName("amethyst_block");
 		setBlockName(Utils.getUnlocalisedName("amethyst_block"));
 		setCreativeTab(isEnabled() ? EtFuturum.creativeTabBlocks : null);
@@ -31,13 +31,13 @@ public class BlockAmethystBlock extends Block implements IConfigurable {
 	public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity ent)
 	{
 		if (!world.isRemote && ent instanceof IProjectile) {
-			 ent.playSound(Reference.MCAssetVer + ":block.amethyst_block.hit", 1.0F, 0.5F + world.rand.nextFloat() * 1.2F);
-			 ent.playSound(Reference.MCAssetVer + ":block.amethyst_block.chime", 1.0F, 0.5F + world.rand.nextFloat() * 1.2F);
+			 ent.playSound(Reference.MCAssetVer + ":block.gemstone_block.hit", 1.0F, 0.5F + world.rand.nextFloat() * 1.2F);
+			 ent.playSound(Reference.MCAssetVer + ":block.gemstone_block.chime", 1.0F, 0.5F + world.rand.nextFloat() * 1.2F);
 		}
 	}
 
 	@Override
 	public boolean isEnabled() {
-		return ConfigBlocksItems.enableAmethyst;
+		return ConfigBlocksItems.enableGemstone;
 	}
 }

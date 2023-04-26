@@ -100,10 +100,73 @@ public class ModBlocks {
 	public static final Block raw_ore_block = initBlock(new BlockRawOre());
 	public static final Block smooth_basalt = initBlock(new BlockSmoothBasalt());
 	public static final Block calcite = initBlock(new BlockCalcite());
+	
+	/* Gemstone Blocks */
+	public static final Block ruby_block = initBlock(new BlockRubyBlock());
+	public static final Block budding_ruby = initBlock(new BlockBuddingRuby());
+	public static final Block ruby_cluster_1 = initBlock(new BlockRubyCluster(0));
+	public static final Block ruby_cluster_2 = initBlock(new BlockRubyCluster(1));
+	
+	public static final Block sapphire_block = initBlock(new BlockSapphireBlock());
+	public static final Block budding_sapphire = initBlock(new BlockBuddingSapphire());
+	public static final Block sapphire_cluster_1 = initBlock(new BlockSapphireCluster(0));
+	public static final Block sapphire_cluster_2 = initBlock(new BlockSapphireCluster(1));
+	
+	public static final Block emerald_block = initBlock(new BlockEmeraldBlock());
+	public static final Block budding_emerald = initBlock(new BlockBuddingEmerald());
+	public static final Block emerald_cluster_1 = initBlock(new BlockEmeraldCluster(0));
+	public static final Block emerald_cluster_2 = initBlock(new BlockEmeraldCluster(1));
+	
+	public static final Block diamond_block = initBlock(new BlockDiamondBlock());
+	public static final Block budding_diamond = initBlock(new BlockBuddingDiamond());
+	public static final Block diamond_cluster_1 = initBlock(new BlockDiamondCluster(0));
+	public static final Block diamond_cluster_2 = initBlock(new BlockDiamondCluster(1));
+	
+	public static final Block agate_block = initBlock(new BlockAgateBlock());
+	public static final Block budding_agate = initBlock(new BlockBuddingAgate());
+	public static final Block agate_cluster_1 = initBlock(new BlockAgateCluster(0));
+	public static final Block agate_cluster_2 = initBlock(new BlockAgateCluster(1));
+	
+	public static final Block jade_block = initBlock(new BlockJadeBlock());
+	public static final Block budding_jade = initBlock(new BlockBuddingJade());
+	public static final Block jade_cluster_1 = initBlock(new BlockJadeCluster(0));
+	public static final Block jade_cluster_2 = initBlock(new BlockJadeCluster(1));
+	
+	public static final Block jasper_block = initBlock(new BlockJasperBlock());
+	public static final Block budding_jasper = initBlock(new BlockBuddingJasper());
+	public static final Block jasper_cluster_1 = initBlock(new BlockJasperCluster(0));
+	public static final Block jasper_cluster_2 = initBlock(new BlockJasperCluster(1));
+	
+	public static final Block opal_block = initBlock(new BlockOpalBlock());
+	public static final Block budding_opal = initBlock(new BlockBuddingOpal());
+	public static final Block opal_cluster_1 = initBlock(new BlockOpalCluster(0));
+	public static final Block opal_cluster_2 = initBlock(new BlockOpalCluster(1));
+	
+	public static final Block topaz_block = initBlock(new BlockTopazBlock());
+	public static final Block budding_topaz = initBlock(new BlockBuddingTopaz());
+	public static final Block topaz_cluster_1 = initBlock(new BlockTopazCluster(0));
+	public static final Block topaz_cluster_2 = initBlock(new BlockTopazCluster(1));
+	
+	public static final Block tourmaline_block = initBlock(new BlockTourmalineBlock());
+	public static final Block budding_tourmaline = initBlock(new BlockBuddingTourmaline());
+	public static final Block tourmaline_cluster_1 = initBlock(new BlockTourmalineCluster(0));
+	public static final Block tourmaline_cluster_2 = initBlock(new BlockTourmalineCluster(1));
+	
+	public static final Block garnet_block = initBlock(new BlockGarnetBlock());
+	public static final Block budding_garnet = initBlock(new BlockBuddingGarnet());
+	public static final Block garnet_cluster_1 = initBlock(new BlockGarnetCluster(0));
+	public static final Block garnet_cluster_2 = initBlock(new BlockGarnetCluster(1));
+	
+	public static final Block beryl_block = initBlock(new BlockBerylBlock());
+	public static final Block budding_beryl = initBlock(new BlockBuddingBeryl());
+	public static final Block beryl_cluster_1 = initBlock(new BlockBerylCluster(0));
+	public static final Block beryl_cluster_2 = initBlock(new BlockBerylCluster(1));
+	
 	public static final Block amethyst_block = initBlock(new BlockAmethystBlock());
 	public static final Block budding_amethyst = initBlock(new BlockBuddingAmethyst());
 	public static final Block amethyst_cluster_1 = initBlock(new BlockAmethystCluster(0));
 	public static final Block amethyst_cluster_2 = initBlock(new BlockAmethystCluster(1));
+	
 
 	public static final Block sculk = initBlock(new BlockSculk());
 	public static final Block sculk_catalyst = initBlock(new BlockSculkCatalyst());

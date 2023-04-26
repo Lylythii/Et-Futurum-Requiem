@@ -22,6 +22,6 @@ public class BlockCalcite extends Block implements IConfigurable {
 
 	@Override
 	public boolean isEnabled() {
-		return ConfigBlocksItems.enableAmethyst;
+		return ConfigBlocksItems.enableGemstone;
 	}
 }
